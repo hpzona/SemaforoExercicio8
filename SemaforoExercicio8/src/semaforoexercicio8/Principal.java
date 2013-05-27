@@ -4,11 +4,11 @@ public class Principal {
 
    public static void main(String args[]) {
       Carro carro = new Carro();
-      Thread consumidor = new Thread(new Consumidor(carro));
-      Thread produtor = new Thread(new Produtor(carro));
+      Thread consumidor = new Thread(new Motorista(carro));
+      Thread passageiro = new Thread(new Passageiro(carro));
       
       
-      produtor.start();
+      passageiro.start();
       consumidor.start();
 
    }
